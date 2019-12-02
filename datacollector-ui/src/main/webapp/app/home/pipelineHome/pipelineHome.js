@@ -1218,6 +1218,7 @@ angular
           previewConfig : {
             previewSource: pipelineConstant.CONFIGURED_SOURCE,
             batchSize: 10,
+            batches: 1,
             timeout: 30000,
             writeToDestinations: false,
             executeLifecycleEvents: false,

@@ -163,7 +163,8 @@ angular
           null,
           previewConfig.timeout,
           $scope.edgeHttpUrl,
-          testOrigin
+          testOrigin,
+          previewConfig.batches
         ).then(function (response) {
           var res = response.data;
           var defer = $q.defer();
@@ -452,7 +453,8 @@ angular
           null,
           previewConfig.timeout,
           $scope.edgeHttpUrl,
-          testOrigin
+          testOrigin,
+          previewConfig.batches
         ).then(function (response) {
           var res = response.data;
           var defer = $q.defer();

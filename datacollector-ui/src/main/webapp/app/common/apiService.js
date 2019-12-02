@@ -878,6 +878,7 @@ angular.module('dataCollectorApp.common')
        * @param timeout
        * @param edgeHttpUrl
        * @param testOrigin
+       * @param batches
        * @returns {*}
        */
       createPreview: function(
@@ -891,7 +892,8 @@ angular.module('dataCollectorApp.common')
         endStage,
         timeout,
         edgeHttpUrl,
-        testOrigin
+        testOrigin,
+        batches
       ) {
         if (!batchSize) {
           batchSize = 10;
@@ -905,6 +907,7 @@ angular.module('dataCollectorApp.common')
           url: url,
           params: {
             batchSize: batchSize,
+            batches: batches,
             rev: rev,
             skipTargets: skipTargets,
             timeout: timeout,

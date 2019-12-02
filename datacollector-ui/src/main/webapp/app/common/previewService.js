@@ -160,11 +160,12 @@ angular.module('dataCollectorApp.common')
      * @param pipelineId
      * @param stageInstance
      * @param batchSize
+     * @param batches
      * @returns {*}
      */
-    this.getInputRecordsFromPreview = function(pipelineId, stageInstance, batchSize) {
+    this.getInputRecordsFromPreview = function(pipelineId, stageInstance, batchSize, batches) {
       var deferred = $q.defer();
-      api.pipelineAgent.createPreview(pipelineId, 0, batchSize, 0, true, true, [], stageInstance.instanceName)
+      api.pipelineAgent.createPreview(pipelineId, 0, batchSize, 0, true, true, [], stageInstance.instanceName, undefined, undefined, undefined, batches)
         .then(
           function (res) {
             var checkStatusDefer = $q.defer();
